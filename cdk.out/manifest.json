@@ -1,0 +1,359 @@
+{
+  "version": "15.0.0",
+  "artifacts": {
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    },
+    "mwaa-hybrid-backend.assets": {
+      "type": "cdk:asset-manifest",
+      "properties": {
+        "file": "mwaa-hybrid-backend.assets.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+      }
+    },
+    "mwaa-hybrid-backend": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://088228764210/us-east-1",
+      "properties": {
+        "templateFile": "mwaa-hybrid-backend.template.json",
+        "validateOnSynth": false,
+        "assumeRoleArn": "arn:${AWS::Partition}:iam::088228764210:role/cdk-hnb659fds-deploy-role-088228764210-us-east-1",
+        "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::088228764210:role/cdk-hnb659fds-cfn-exec-role-088228764210-us-east-1",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-088228764210-us-east-1/f93576f9954cbfd689545d809a1ad7c1b0c9af1c2cf80862d1dae53973215f04.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
+        "additionalDependencies": [
+          "mwaa-hybrid-backend.assets"
+        ]
+      },
+      "dependencies": [
+        "mwaa-hybrid-backend.assets"
+      ],
+      "metadata": {
+        "/mwaa-hybrid-backend/MWAA-Hybrid-ApacheAirflow-VPC/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MWAAHybridApacheAirflowVPC677B092E"
+          }
+        ],
+        "/mwaa-hybrid-backend/MWAA-Hybrid-ApacheAirflow-VPC/publicSubnet1/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MWAAHybridApacheAirflowVPCpublicSubnet1Subnet38AC1EF6"
+          }
+        ],
+        "/mwaa-hybrid-backend/MWAA-Hybrid-ApacheAirflow-VPC/publicSubnet1/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MWAAHybridApacheAirflowVPCpublicSubnet1RouteTableDF2380C1"
+          }
+        ],
+        "/mwaa-hybrid-backend/MWAA-Hybrid-ApacheAirflow-VPC/publicSubnet1/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MWAAHybridApacheAirflowVPCpublicSubnet1RouteTableAssociation310D400D"
+          }
+        ],
+        "/mwaa-hybrid-backend/MWAA-Hybrid-ApacheAirflow-VPC/publicSubnet1/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MWAAHybridApacheAirflowVPCpublicSubnet1DefaultRoute27E73C5B"
+          }
+        ],
+        "/mwaa-hybrid-backend/MWAA-Hybrid-ApacheAirflow-VPC/publicSubnet1/EIP": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MWAAHybridApacheAirflowVPCpublicSubnet1EIP05F00298"
+          }
+        ],
+        "/mwaa-hybrid-backend/MWAA-Hybrid-ApacheAirflow-VPC/publicSubnet1/NATGateway": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MWAAHybridApacheAirflowVPCpublicSubnet1NATGateway91424CD1"
+          }
+        ],
+        "/mwaa-hybrid-backend/MWAA-Hybrid-ApacheAirflow-VPC/publicSubnet2/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MWAAHybridApacheAirflowVPCpublicSubnet2Subnet1D644B79"
+          }
+        ],
+        "/mwaa-hybrid-backend/MWAA-Hybrid-ApacheAirflow-VPC/publicSubnet2/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MWAAHybridApacheAirflowVPCpublicSubnet2RouteTableA9A2778D"
+          }
+        ],
+        "/mwaa-hybrid-backend/MWAA-Hybrid-ApacheAirflow-VPC/publicSubnet2/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MWAAHybridApacheAirflowVPCpublicSubnet2RouteTableAssociationEFA9E1EF"
+          }
+        ],
+        "/mwaa-hybrid-backend/MWAA-Hybrid-ApacheAirflow-VPC/publicSubnet2/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MWAAHybridApacheAirflowVPCpublicSubnet2DefaultRoute0862462D"
+          }
+        ],
+        "/mwaa-hybrid-backend/MWAA-Hybrid-ApacheAirflow-VPC/privateSubnet1/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MWAAHybridApacheAirflowVPCprivateSubnet1Subnet2A6995DF"
+          }
+        ],
+        "/mwaa-hybrid-backend/MWAA-Hybrid-ApacheAirflow-VPC/privateSubnet1/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MWAAHybridApacheAirflowVPCprivateSubnet1RouteTableEFF3B528"
+          }
+        ],
+        "/mwaa-hybrid-backend/MWAA-Hybrid-ApacheAirflow-VPC/privateSubnet1/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MWAAHybridApacheAirflowVPCprivateSubnet1RouteTableAssociation994A1B83"
+          }
+        ],
+        "/mwaa-hybrid-backend/MWAA-Hybrid-ApacheAirflow-VPC/privateSubnet1/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MWAAHybridApacheAirflowVPCprivateSubnet1DefaultRouteE3D04871"
+          }
+        ],
+        "/mwaa-hybrid-backend/MWAA-Hybrid-ApacheAirflow-VPC/privateSubnet2/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MWAAHybridApacheAirflowVPCprivateSubnet2SubnetA2865953"
+          }
+        ],
+        "/mwaa-hybrid-backend/MWAA-Hybrid-ApacheAirflow-VPC/privateSubnet2/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MWAAHybridApacheAirflowVPCprivateSubnet2RouteTable9E71BD0B"
+          }
+        ],
+        "/mwaa-hybrid-backend/MWAA-Hybrid-ApacheAirflow-VPC/privateSubnet2/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MWAAHybridApacheAirflowVPCprivateSubnet2RouteTableAssociation07585B7D"
+          }
+        ],
+        "/mwaa-hybrid-backend/MWAA-Hybrid-ApacheAirflow-VPC/privateSubnet2/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MWAAHybridApacheAirflowVPCprivateSubnet2DefaultRoute69A0C649"
+          }
+        ],
+        "/mwaa-hybrid-backend/MWAA-Hybrid-ApacheAirflow-VPC/IGW": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MWAAHybridApacheAirflowVPCIGW490EB9FD"
+          }
+        ],
+        "/mwaa-hybrid-backend/MWAA-Hybrid-ApacheAirflow-VPC/VPCGW": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MWAAHybridApacheAirflowVPCVPCGW9159C4CD"
+          }
+        ],
+        "/mwaa-hybrid-backend/VPCId": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCId"
+          }
+        ],
+        "/mwaa-hybrid-backend/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata"
+          }
+        ],
+        "/mwaa-hybrid-backend/Exports/Output{\"Ref\":\"MWAAHybridApacheAirflowVPC677B092E\"}": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ExportsOutputRefMWAAHybridApacheAirflowVPC677B092EF6F2F587"
+          }
+        ],
+        "/mwaa-hybrid-backend/Exports/Output{\"Ref\":\"MWAAHybridApacheAirflowVPCprivateSubnet1Subnet2A6995DF\"}": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ExportsOutputRefMWAAHybridApacheAirflowVPCprivateSubnet1Subnet2A6995DF7F8D3134"
+          }
+        ],
+        "/mwaa-hybrid-backend/Exports/Output{\"Ref\":\"MWAAHybridApacheAirflowVPCprivateSubnet2SubnetA2865953\"}": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ExportsOutputRefMWAAHybridApacheAirflowVPCprivateSubnet2SubnetA28659530C36370A"
+          }
+        ],
+        "/mwaa-hybrid-backend/BootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BootstrapVersion"
+          }
+        ],
+        "/mwaa-hybrid-backend/CheckBootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CheckBootstrapVersion"
+          }
+        ]
+      },
+      "displayName": "mwaa-hybrid-backend"
+    },
+    "mwaa-hybrid-environment.assets": {
+      "type": "cdk:asset-manifest",
+      "properties": {
+        "file": "mwaa-hybrid-environment.assets.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+      }
+    },
+    "mwaa-hybrid-environment": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://088228764210/us-east-1",
+      "properties": {
+        "templateFile": "mwaa-hybrid-environment.template.json",
+        "validateOnSynth": false,
+        "assumeRoleArn": "arn:${AWS::Partition}:iam::088228764210:role/cdk-hnb659fds-deploy-role-088228764210-us-east-1",
+        "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::088228764210:role/cdk-hnb659fds-cfn-exec-role-088228764210-us-east-1",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-088228764210-us-east-1/1c373f9d9e58ae13da7852d566aac2128ccbdd31497d111ed15ae69bdca6a050.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
+        "additionalDependencies": [
+          "mwaa-hybrid-environment.assets"
+        ]
+      },
+      "dependencies": [
+        "mwaa-hybrid-backend",
+        "mwaa-hybrid-environment.assets"
+      ],
+      "metadata": {
+        "/mwaa-hybrid-environment/mwaa-dags/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "mwaadags537631EF"
+          }
+        ],
+        "/mwaa-hybrid-environment/DeployDAG/AwsCliLayer/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DeployDAGAwsCliLayer6BE262D5"
+          }
+        ],
+        "/mwaa-hybrid-environment/DeployDAG/CustomResource/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DeployDAGCustomResource1EAEB4D8"
+          }
+        ],
+        "/mwaa-hybrid-environment/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756CServiceRole89A01265"
+          }
+        ],
+        "/mwaa-hybrid-environment/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756CServiceRoleDefaultPolicy88902FDF"
+          }
+        ],
+        "/mwaa-hybrid-environment/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C81C01536"
+          }
+        ],
+        "/mwaa-hybrid-environment/mwaa-service-role/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "mwaaservicerole26CF19B9"
+          }
+        ],
+        "/mwaa-hybrid-environment/mwaa-sg": [
+          {
+            "type": "aws:cdk:warning",
+            "data": "Ignoring Egress rule since 'allowAllOutbound' is set to true; To add customize rules, set allowAllOutbound=false on the SecurityGroup",
+            "trace": [
+              "Annotations.addMessage (C:\\Users\\dev\\AppData\\Local\\Temp\\jsii-kernel-aYfWOX\\node_modules\\aws-cdk-lib\\core\\lib\\annotations.js:98:42)",
+              "Annotations.addWarning (C:\\Users\\dev\\AppData\\Local\\Temp\\jsii-kernel-aYfWOX\\node_modules\\aws-cdk-lib\\core\\lib\\annotations.js:41:14)",
+              "SecurityGroup.addEgressRule (C:\\Users\\dev\\AppData\\Local\\Temp\\jsii-kernel-aYfWOX\\node_modules\\aws-cdk-lib\\aws-ec2\\lib\\security-group.js:382:45)",
+              "C:\\Users\\dev\\AppData\\Local\\Temp\\jsii-kernel-aYfWOX\\node_modules\\aws-cdk-lib\\aws-ec2\\lib\\connections.js:136:31",
+              "ReactiveList.forEachAndForever (C:\\Users\\dev\\AppData\\Local\\Temp\\jsii-kernel-aYfWOX\\node_modules\\aws-cdk-lib\\aws-ec2\\lib\\connections.js:239:13)",
+              "C:\\Users\\dev\\AppData\\Local\\Temp\\jsii-kernel-aYfWOX\\node_modules\\aws-cdk-lib\\aws-ec2\\lib\\connections.js:134:38",
+              "ReactiveList.forEachAndForever (C:\\Users\\dev\\AppData\\Local\\Temp\\jsii-kernel-aYfWOX\\node_modules\\aws-cdk-lib\\aws-ec2\\lib\\connections.js:239:13)",
+              "Connections.allowInternally (C:\\Users\\dev\\AppData\\Local\\Temp\\jsii-kernel-aYfWOX\\node_modules\\aws-cdk-lib\\aws-ec2\\lib\\connections.js:133:30)",
+              "C:\\Users\\dev\\AppData\\Local\\Temp\\tmpx_mifcvn\\lib\\program.js:9855:172",
+              "Kernel._Kernel_ensureSync (C:\\Users\\dev\\AppData\\Local\\Temp\\tmpx_mifcvn\\lib\\program.js:10480:24)",
+              "Kernel.invoke (C:\\Users\\dev\\AppData\\Local\\Temp\\tmpx_mifcvn\\lib\\program.js:9855:102)",
+              "KernelHost.processRequest (C:\\Users\\dev\\AppData\\Local\\Temp\\tmpx_mifcvn\\lib\\program.js:11699:36)",
+              "KernelHost.run (C:\\Users\\dev\\AppData\\Local\\Temp\\tmpx_mifcvn\\lib\\program.js:11659:22)",
+              "Immediate._onImmediate (C:\\Users\\dev\\AppData\\Local\\Temp\\tmpx_mifcvn\\lib\\program.js:11660:46)",
+              "process.processImmediate (node:internal/timers:476:21)"
+            ]
+          }
+        ],
+        "/mwaa-hybrid-environment/mwaa-sg/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "mwaasg460AC42F"
+          }
+        ],
+        "/mwaa-hybrid-environment/mwaa-sg/from mwaahybridenvironmentmwaasg835D75B1:ALL TRAFFIC": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "mwaasgfrommwaahybridenvironmentmwaasg835D75B1ALLTRAFFICF8A1464A"
+          }
+        ],
+        "/mwaa-hybrid-environment/mwaa-hybrid-demoKey/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "mwaahybriddemoKey1EFC6F10"
+          }
+        ],
+        "/mwaa-hybrid-environment/mwaa-hybrid-demoKey/Alias/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "mwaahybriddemoKeyAlias5BC19DDD"
+          }
+        ],
+        "/mwaa-hybrid-environment/airflow-test-environment": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "airflowtestenvironment"
+          }
+        ],
+        "/mwaa-hybrid-environment/MWAASecurityGroup": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MWAASecurityGroup"
+          }
+        ],
+        "/mwaa-hybrid-environment/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata"
+          }
+        ],
+        "/mwaa-hybrid-environment/BootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BootstrapVersion"
+          }
+        ],
+        "/mwaa-hybrid-environment/CheckBootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CheckBootstrapVersion"
+          }
+        ]
+      },
+      "displayName": "mwaa-hybrid-environment"
+    }
+  }
+}
